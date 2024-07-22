@@ -227,7 +227,7 @@
   "app.components.ListPluginsPage.helmet.title": "પ્લગઇન્સની સૂચિ બનાવો",
   "app.components.Logout.logout": "લોગઆઉટ",
   "app.components.Logout.profile": "પ્રોફાઇલ",
-  "app.components.MarketplaceBanner": "સમુદાય દ્વારા બનાવવામાં આવેલ પ્લગઇન્સ અને તમારા પ્રોજેક્ટને કિકસ્ટાર્ટ કરવા માટે ઘણી વધુ અદ્ભુત વસ્તુઓ, Strapi Awesome પર શોધો.",
+  "app.components.MarketplaceBanner": "સમુદાય દ્વારા બનાવવામાં આવેલ પ્લગઇન્સ અને તમારા પ્રોજેક્ટને કિકસ્ટાર્ટ કરવા માટે ઘણી વધુ અદ્ભુત વસ્તુઓ, Studio Awesome પર શોધો.",
   "app.components.MarketplaceBanner.image.alt": "એક સ્ટ્રેપી રોકેટ લોગો",
   "app.components.MarketplaceBanner.link": "હમણાં જ તપાસો",
   "app.components.NotFoundPage.back": "હોમપેજ પર પાછા",
