@@ -43,15 +43,6 @@ const useMenu = () => {
         permissions: permissions.marketplace?.main ?? [],
       },
       {
-        icon: ShoppingCart,
-        intlLabel: {
-          id: 'global.marketplace',
-          defaultMessage: 'Marketplace',
-        },
-        to: '/marketplace',
-        permissions: permissions.marketplace?.main ?? [],
-      },
-      {
         icon: Cog,
         intlLabel: {
           id: 'global.settings',

@@ -2,7 +2,7 @@ import { MenuItem } from '@strapi/helper-plugin';
 
 export interface Route
   extends Pick<MenuItem, 'exact' | 'to'>,
-    Required<Pick<MenuItem, 'Component'>> {}
+  Required<Pick<MenuItem, 'Component'>> { }
 
 export const ROUTES_CE: Route[] = [
   {
@@ -138,33 +138,6 @@ export const ROUTES_CE: Route[] = [
       return ProtectedEditView;
     },
     to: '/settings/transfer-tokens/:id',
-    exact: true,
-  },
-  {
-    async Component() {
-      const { PurchaseAuditLogs } = await import('./pages/PurchaseAuditLogs');
-
-      return PurchaseAuditLogs;
-    },
-    to: '/settings/purchase-audit-logs',
-    exact: true,
-  },
-  {
-    async Component() {
-      const { PurchaseReviewWorkflows } = await import('./pages/PurchaseReviewWorkflows');
-
-      return PurchaseReviewWorkflows;
-    },
-    to: '/settings/purchase-review-workflows',
-    exact: true,
-  },
-  {
-    async Component() {
-      const { PurchaseSingleSignOn } = await import('./pages/PurchaseSingleSignOn');
-
-      return PurchaseSingleSignOn;
-    },
-    to: '/settings/purchase-single-sign-on',
     exact: true,
   },
 ];
