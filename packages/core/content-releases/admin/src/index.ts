@@ -61,24 +61,25 @@ const admin: Plugin.Config.AdminInput = {
       });
       // Hook that adds a column into the CM's LV table
       app.registerHook('Admin/CM/pages/ListView/inject-column-in-table', addColumnToTableHook);
-    } else if (
-      !window.strapi.features.isEnabled('cms-content-releases') &&
-      window.strapi?.flags?.promoteEE
-    ) {
-      app.addMenuLink({
-        to: `/plugins/purchase-content-releases`,
-        icon: PaperPlane,
-        intlLabel: {
-          id: `${pluginId}.plugin.name`,
-          defaultMessage: 'Releases',
-        },
-        async Component() {
-          const { PurchaseContentReleases } = await import('./pages/PurchaseContentReleases');
-          return PurchaseContentReleases;
-        },
-        lockIcon: true, // TODO: to replace with another name in v5
-      });
     }
+    // else if (
+    //   !window.strapi.features.isEnabled('cms-content-releases') &&
+    //   window.strapi?.flags?.promoteEE
+    // ) {
+    //   app.addMenuLink({
+    //     to: `/plugins/purchase-content-releases`,
+    //     icon: PaperPlane,
+    //     intlLabel: {
+    //       id: `${pluginId}.plugin.name`,
+    //       defaultMessage: 'Releases',
+    //     },
+    //     async Component() {
+    //       const { PurchaseContentReleases } = await import('./pages/PurchaseContentReleases');
+    //       return PurchaseContentReleases;
+    //     },
+    //     lockIcon: true, // TODO: to replace with another name in v5
+    //   });
+    // }
   },
   async registerTrads({ locales }: { locales: string[] }) {
     const importedTrads = await Promise.all(
