@@ -1,26 +1,26 @@
 import * as React from 'react';
+import * as yup from 'yup';
 
 import {
   Box,
+  Button,
+  Field,
+  FieldInput,
+  FieldLabel,
   Flex,
   IconButton,
-  Button,
-  Typography,
-  Textarea,
   Portal,
-  Field,
-  FieldLabel,
-  FieldInput,
+  Textarea,
+  Typography,
   VisuallyHidden,
 } from '@strapi/design-system';
-import { useNotification, useAppInfo, usePersistentState } from '@strapi/helper-plugin';
-import { Cross } from '@strapi/icons';
-import { Formik, Form } from 'formik';
-import { useIntl } from 'react-intl';
+import { Form, Formik } from 'formik';
 import styled, { useTheme } from 'styled-components';
-import * as yup from 'yup';
+import { useAppInfo, useNotification, usePersistentState } from '@strapi/helper-plugin';
 
+import { Cross } from '@strapi/icons';
 import { useAuth } from '../features/Auth';
+import { useIntl } from 'react-intl';
 
 const FieldWrapper = styled(Field)`
   height: ${32 / 16}rem;
@@ -97,7 +97,7 @@ const checkIfShouldShowSurvey = (settings: NpsSurveySettings) => {
     const timeSinceLastResponse = Date.now() - new Date(lastResponseDate).getTime();
 
     if (timeSinceLastResponse >= delays.postResponse) {
-      return true;
+      return false;
     }
 
     return false;
@@ -108,7 +108,7 @@ const checkIfShouldShowSurvey = (settings: NpsSurveySettings) => {
     const timeSinceLastDismissal = Date.now() - new Date(lastDismissalDate).getTime();
 
     if (timeSinceLastDismissal >= delays.postSubsequentDismissal) {
-      return true;
+      return false;
     }
 
     return false;
@@ -119,14 +119,14 @@ const checkIfShouldShowSurvey = (settings: NpsSurveySettings) => {
     const timeSinceFirstDismissal = Date.now() - new Date(firstDismissalDate).getTime();
 
     if (timeSinceFirstDismissal >= delays.postFirstDismissal) {
-      return true;
+      return false;
     }
 
     return false;
   }
 
   // The user has not interacted with the survey before
-  return true;
+  return false;
 };
 
 const NpsSurvey = () => {
