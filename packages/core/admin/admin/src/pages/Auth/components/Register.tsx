@@ -36,7 +36,6 @@ import {
   Register as RegisterUser,
   RegisterAdmin,
 } from '../../../../../shared/contracts/authentication';
-import { useNpsSurveySettings } from '../../../components/NpsSurvey';
 import { Logo } from '../../../components/UnauthenticatedLogo';
 import { useAuth } from '../../../features/Auth';
 import { LayoutContent, UnauthenticatedLayout } from '../../../layouts/UnauthenticatedLayout';
@@ -121,7 +120,6 @@ const Register = ({ hasAdmin }: RegisterProps) => {
     _unstableFormatAPIError: formatAPIError,
     _unstableFormatValidationErrors: formatValidationErrors,
   } = useAPIErrorHandler();
-  const { setNpsSurveySettings } = useNpsSurveySettings();
 
   const registrationToken = query.get('registrationToken');
 
@@ -169,8 +167,6 @@ const Register = ({ hasAdmin }: RegisterProps) => {
 
       if (news) {
         // Only enable EE survey if user accepted the newsletter
-        setNpsSurveySettings((s) => ({ ...s, enabled: true }));
-
         push({
           pathname: '/usecase',
           search: `?hasAdmin=${true}`,
@@ -203,8 +199,6 @@ const Register = ({ hasAdmin }: RegisterProps) => {
 
       if (news) {
         // Only enable EE survey if user accepted the newsletter
-        setNpsSurveySettings((s) => ({ ...s, enabled: true }));
-
         push({
           pathname: '/usecase',
           search: `?hasAdmin=${hasAdmin}`,
