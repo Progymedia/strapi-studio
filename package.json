@@ -1,24 +1,19 @@
 {
-  "name": "strapi",
+  "name": "@progymedia/strapi-studio",
   "private": true,
-  "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
-  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/strapi/strapi.git"
+    "url": "git://github.com:Progymedia/strapi-studio.git"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": {
-    "name": "Strapi Solutions SAS",
-    "email": "hi@strapi.io",
-    "url": "https://strapi.io"
+    "name": "Progymédia",
+    "url": "https://progymedia.com"
   },
   "maintainers": [
     {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Progymédia",
+      "url": "https://progymedia.com"
     }
   ],
   "workspaces": [
