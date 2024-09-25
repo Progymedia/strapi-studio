@@ -5246,7 +5246,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@progymedia/strapi-studio@npm:0.6.0, @progymedia/strapi-studio@workspace:.":
+"@progymedia/strapi-studio@workspace:.":
   version: 0.0.0-use.local
   resolution: "@progymedia/strapi-studio@workspace:."
   dependencies:
@@ -5296,6 +5296,7 @@ __metadata:
     fs-extra: "npm:10.0.0"
     get-port: "npm:5.1.1"
     glob: "npm:7.2.3"
+    https-proxy-agent: "npm:5.0.1"
     husky: "npm:8.0.2"
     inquirer: "npm:8.2.5"
     jest: "npm:29.6.0"
@@ -8387,7 +8388,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@strapi/content-releases@workspace:packages/core/content-releases"
   dependencies:
-    "@progymedia/strapi-studio": "npm:0.6.0"
     "@reduxjs/toolkit": "npm:1.9.7"
     "@strapi/admin": "npm:4.25.4"
     "@strapi/admin-test-utils": "npm:4.25.4"
@@ -8395,6 +8395,7 @@ __metadata:
     "@strapi/helper-plugin": "npm:4.25.4"
     "@strapi/icons": "npm:1.19.0"
     "@strapi/pack-up": "npm:4.23.0"
+    "@strapi/strapi": "npm:4.25.4"
     "@strapi/types": "workspace:*"
     "@strapi/utils": "npm:4.25.4"
     "@testing-library/react": "npm:14.0.0"
@@ -8418,8 +8419,8 @@ __metadata:
     typescript: "npm:5.2.2"
     yup: "npm:0.32.9"
   peerDependencies:
-    "@progymedia/strapi-studio": 0.6.0
     "@strapi/admin": ^4.19.0
+    "@strapi/strapi": ^4.15.1
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
     react-router-dom: 5.3.4
@@ -8782,7 +8783,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@strapi/plugin-content-type-builder@workspace:packages/core/content-type-builder"
   dependencies:
-    "@progymedia/strapi-studio": "npm:0.6.0"
     "@reduxjs/toolkit": "npm:1.9.7"
     "@sindresorhus/slugify": "npm:1.1.0"
     "@strapi/design-system": "npm:1.19.0"
@@ -8790,6 +8790,7 @@ __metadata:
     "@strapi/helper-plugin": "npm:4.25.4"
     "@strapi/icons": "npm:1.19.0"
     "@strapi/pack-up": "npm:4.23.0"
+    "@strapi/strapi": "npm:4.25.4"
     "@strapi/types": "npm:4.25.4"
     "@strapi/utils": "npm:4.25.4"
     "@testing-library/react": "npm:14.0.0"
@@ -8814,7 +8815,7 @@ __metadata:
     styled-components: "npm:5.3.3"
     yup: "npm:0.32.9"
   peerDependencies:
-    "@progymedia/strapi-studio": 0.6.0
+    "@strapi/strapi": ^4.0.0
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
     react-router-dom: ^5.2.0
@@ -8827,11 +8828,11 @@ __metadata:
   resolution: "@strapi/plugin-documentation@workspace:packages/plugins/documentation"
   dependencies:
     "@apidevtools/swagger-parser": "npm:^10.1.0"
-    "@progymedia/strapi-studio": "npm:0.6.0"
     "@strapi/design-system": "npm:1.19.0"
     "@strapi/helper-plugin": "npm:4.25.4"
     "@strapi/icons": "npm:1.19.0"
     "@strapi/pack-up": "npm:4.23.0"
+    "@strapi/strapi": "npm:4.25.4"
     "@strapi/utils": "npm:4.25.4"
     "@testing-library/react": "npm:14.0.0"
     "@testing-library/user-event": "npm:14.4.3"
@@ -8855,7 +8856,7 @@ __metadata:
     yaml: "npm:1.10.2"
     yup: "npm:0.32.9"
   peerDependencies:
-    "@progymedia/strapi-studio": 0.6.0
+    "@strapi/strapi": ^4.0.0
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
     react-router-dom: ^5.2.0
@@ -9055,11 +9056,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@strapi/plugin-users-permissions@workspace:packages/plugins/users-permissions"
   dependencies:
-    "@progymedia/strapi-studio": "npm:0.6.0"
     "@strapi/design-system": "npm:1.19.0"
     "@strapi/helper-plugin": "npm:4.25.4"
     "@strapi/icons": "npm:1.19.0"
     "@strapi/pack-up": "npm:4.23.0"
+    "@strapi/strapi": "npm:4.25.4"
     "@strapi/utils": "npm:4.25.4"
     "@testing-library/dom": "npm:9.2.0"
     "@testing-library/react": "npm:14.0.0"
@@ -9086,7 +9087,7 @@ __metadata:
     url-join: "npm:4.0.1"
     yup: "npm:0.32.9"
   peerDependencies:
-    "@progymedia/strapi-studio": 0.6.0
+    "@strapi/strapi": ^4.0.0
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
     react-router-dom: ^5.2.0
