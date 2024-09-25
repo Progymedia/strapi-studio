@@ -4,7 +4,6 @@ on:
   pull_request:
     paths:
       - '**/admin/src/**.js'
-      - '**/ee/admin/**.js'
       - '**/helper-plugin/src/**.js'
       - '**/translations/**.json'
 
@@ -16,7 +15,6 @@ jobs:
   admin_size:
     runs-on: ubuntu-latest
 
-    # Allows the action to comment on PRs
     permissions:
       contents: read
       pull-requests: write

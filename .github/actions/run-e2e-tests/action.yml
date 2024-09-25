@@ -1,8 +1,6 @@
 name: 'Run e2e tests'
-description: 'Run e2e tests'
+description: 'Run e2e tests for @progymedia/strapi-studio Community Edition'
 inputs:
-  runEE:
-    description: 'Should run EE or CE e2e tests'
   jestOptions:
     description: 'Jest options'
   enableFutureFeatures:
@@ -12,7 +10,6 @@ runs:
   steps:
     - run: $GITHUB_ACTION_PATH/script.sh
       env:
-        RUN_EE: ${{ inputs.runEE }}
         JEST_OPTIONS: ${{ inputs.jestOptions }}
         STRAPI_FEATURES_FUTURE_RELEASES_SCHEDULING: ${{ inputs.enableFutureFeatures }}
       shell: bash
