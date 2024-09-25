@@ -1,9 +1,9 @@
 {
   "name": "@progymedia/strapi-studio",
-  "private": true,
+  "version": "0.4.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com:Progymedia/strapi-studio.git"
+    "url": "git://github.com/Progymedia/strapi-studio.git"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": {
@@ -28,7 +28,7 @@
     "build": "nx run-many --target=build --nx-ignore-cycles",
     "build:size": "cd examples/getstarted && yarn build",
     "build:ts": "nx run-many --target=build:ts --nx-ignore-cycles",
-    "build:watch": "nx watch --all --nx-ignore-cycles -- nx run \\$NX_PROJECT_NAME:build --nx-ignore-cycles",
+    "build:watch": "nx watch --all --nx-ignore-cycles -- nx run $NX_PROJECT_NAME:build --nx-ignore-cycles",
     "clean": "nx run-many --target=clean --nx-ignore-cycles",
     "doc:api": "node scripts/open-api/serve.js",
     "format": "yarn format:code && yarn format:other",
@@ -42,6 +42,7 @@
     "prettier:code": "prettier --cache --cache-strategy content \"**/*.{js,ts,jsx,tsx,json}\"",
     "prettier:other": "prettier --cache --cache-strategy content \"**/*.{md,mdx,css,scss,yaml,yml}\"",
     "prettier:write": "prettier --write \"**/*.{js,ts,jsx,tsx,json,md,mdx,css,scss,yaml,yml}\"",
+    "release": "bash ./scripts/publish.sh",
     "setup": "yarn && yarn clean && yarn build --skip-nx-cache",
     "test:api": "node tests/scripts/run-api-tests.js",
     "test:api:clean": "rimraf ./coverage",
