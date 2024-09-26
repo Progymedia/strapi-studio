@@ -1,12 +1,11 @@
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import outdent from 'outdent';
-import { format } from 'prettier';
-import { createElement } from 'react';
-import { renderToStaticMarkup } from 'react-dom/server';
-import { DefaultDocument } from '../../admin/src/components/DefaultDocument';
-
 import type { BuildContext } from './createBuildContext';
+import { DefaultDocument } from '../../admin/src/components/DefaultDocument';
+import { createElement } from 'react';
+import { format } from 'prettier';
+import fs from 'node:fs/promises';
+import outdent from 'outdent';
+import path from 'node:path';
+import { renderToStaticMarkup } from 'react-dom/server';
 
 const getEntryModule = (ctx: BuildContext): string => {
   const pluginsObject = ctx.plugins
@@ -23,7 +22,7 @@ const getEntryModule = (ctx: BuildContext): string => {
          * Any modifications made will be discarded.
          */
         ${pluginsImport}
-        import { renderAdmin } from "@strapi/strapi/admin"
+        import { renderAdmin } from "@progymedia/strapi-studio/packages/core/admin"
 
         ${
           ctx.customisations?.modulePath

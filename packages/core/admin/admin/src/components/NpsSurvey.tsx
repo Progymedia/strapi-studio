@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as yup from 'yup';
 
 import {
   Box,
@@ -14,13 +13,14 @@ import {
   Typography,
   VisuallyHidden,
 } from '@strapi/design-system';
-import { Form, Formik } from 'formik';
-import styled, { useTheme } from 'styled-components';
 import { useAppInfo, useNotification, usePersistentState } from '@strapi/helper-plugin';
-
 import { Cross } from '@strapi/icons';
-import { useAuth } from '../features/Auth';
+import { Form, Formik } from 'formik';
 import { useIntl } from 'react-intl';
+import styled, { useTheme } from 'styled-components';
+import * as yup from 'yup';
+
+import { useAuth } from '../features/Auth';
 
 const FieldWrapper = styled(Field)`
   height: ${32 / 16}rem;
